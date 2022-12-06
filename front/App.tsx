@@ -1,12 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 
-import ViewEffect from "./src/screens/ViewEffect";
-import ViewImages from "./src/screens/ViewImages";
-import ViewPicker from "./src/screens/ViewPicker";
-import ViewState from "./src/screens/ViewState";
 import ViewNav1 from "./src/screens/ViewNav1";
 import ViewTasks from "./src/screens/ViewTasks";
-import ViewLogin from "./src/screens/ViewLogin";
+
 import ViewUsers from "./src/screens/ViewUsers";
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -21,7 +17,7 @@ import {
 } from '@expo-google-fonts/roboto-slab'
 import { useFonts } from 'expo-font'; //1
 import { AppProvider } from "./src/context/AppContext";
-import ViewSkeleton from "./src/screens/ViewSkeleton";
+
 import ViewNewLogin from "./src/screens/ViewNewLogin";
 
 const Stack = createNativeStackNavigator();
@@ -48,13 +44,7 @@ export default function App() {
               <Stack.Screen name="Menu" component={ViewNav1} />
               <Stack.Screen name="Usuários" component={ViewUsers} />
               <Stack.Screen name="Login" component={ViewNewLogin} />
-              <Stack.Screen name="ViewSkeleton" component={ViewSkeleton} />
-              <Stack.Screen name="ViewLogin" component={ViewLogin} />
-              <Stack.Screen name="ViewState" component={ViewState} />
-              <Stack.Screen name="ViewEffect" component={ViewEffect} />
-              <Stack.Screen name="ViewImages" component={ViewImages} />
-              <Stack.Screen name="ViewPicker" component={ViewPicker} />
-              <Stack.Screen name="ViewTasks" component={ViewTasks} />
+              <Stack.Screen name="Tarefas" component={ViewTasks} />
             </Stack.Navigator>
           </NavigationContainer>
 

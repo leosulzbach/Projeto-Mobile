@@ -11,7 +11,11 @@ const ViewNav1 = (props) => {
 
       <CustomButton
         onPress={() => props.navigation.navigate("Usuários")}
-        label="Navegar para Usuários"
+        label="Usuários"
+        style={styles.button} />
+      <CustomButton
+        onPress={() => props.navigation.navigate("Tarefas")}
+        label="Tarefas"
         style={styles.button} />
 
     </Animatable.View>
@@ -35,6 +39,9 @@ const styles = StyleSheet.create({
     maxHeight: 55,
     maxWidth: 350,
     minHeight: 55,
-    minWidth: 350
+    minWidth: 350,
+    marginBottom: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 });

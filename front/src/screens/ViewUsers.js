@@ -61,6 +61,7 @@ export default ViewUsers = ({ navigation }) => {
 
     function alterUser(user) {
         onOpenModal()
+        console.log(user)
         setUser(user)
     }
 
@@ -70,7 +71,7 @@ export default ViewUsers = ({ navigation }) => {
     }
 
     async function saveUser() {
-        console.log("SALVOU (SÓ QUE NÃO)")
+        
     }
 
     async function listUsers() {
@@ -99,12 +100,6 @@ export default ViewUsers = ({ navigation }) => {
 
     return (
         <View style={theme.container}>
-            {/* <SkeletonPlaceholder
-                speed={600}>
-                <SkeletonPlaceholder.Item
-                    width={200}
-                    height={45} />
-            </SkeletonPlaceholder> */}
             <FlatList
                 data={users}
                 onRefresh={() => listUsers()}

@@ -43,10 +43,10 @@ const ViewNewLogin = ({ navigation }) => {
                 }
             });
             const json = await response.json();
-            console.log(json);
             setLoading(false);
-            if (json =! null) {
-
+            if (json === null || json === undefined) {
+                Alert.alert('Que pena 😥', 'Usuário Inválido');
+            }else if (json.id) {
                 //DADOS OK => navegar adiante
                 saveUser(user, pass);
                 //navigation.navigate("ViewUsers");
@@ -55,10 +55,7 @@ const ViewNewLogin = ({ navigation }) => {
                     index: 0,
                     routes: [{ name: "Menu" }]
                 })
-
-            } else {
-                Alert.alert('Que pena 😥', json.message);
-            }
+            } 
         }
 
         testLogin();

@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 16,
-        backgroundColor: '#122a57',
+        backgroundColor: '#0e0e0c',
         alignItems: 'flex-start',
     },
     input: {
