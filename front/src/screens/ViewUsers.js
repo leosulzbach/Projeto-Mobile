@@ -69,8 +69,8 @@ export default ViewUsers = ({ navigation }) => {
         setUser(initialUser)
     }
 
-    function saveUser() {
-        console.log('SALVAR')
+    async function saveUser() {
+        console.log("SALVOU (SÓ QUE NÃO)")
     }
 
     async function listUsers() {
@@ -79,7 +79,7 @@ export default ViewUsers = ({ navigation }) => {
 
         //console.log('CREDENTIALS=>', _username, _password);
 
-        const response = await fetch('http://177.44.248.30:3333/users', {
+        const response = await fetch('http://177.44.248.47:3000/users', {
             method: 'GET',
             headers: {
                 'Authorization': 'Basic ' +

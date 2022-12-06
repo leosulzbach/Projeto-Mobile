@@ -43,11 +43,11 @@ export default function App() {
         <>
           <NavigationContainer>
             <Stack.Navigator
-              initialRouteName="ViewNewLogin"
+              initialRouteName="Login"
               screenOptions={{ headerShown: true }} >
-              <Stack.Screen name="ViewNav1" component={ViewNav1} />
-              <Stack.Screen name="ViewUsers" component={ViewUsers} />
-              <Stack.Screen name="ViewNewLogin" component={ViewNewLogin} />
+              <Stack.Screen name="Menu" component={ViewNav1} />
+              <Stack.Screen name="Usuários" component={ViewUsers} />
+              <Stack.Screen name="Login" component={ViewNewLogin} />
               <Stack.Screen name="ViewSkeleton" component={ViewSkeleton} />
               <Stack.Screen name="ViewLogin" component={ViewLogin} />
               <Stack.Screen name="ViewState" component={ViewState} />

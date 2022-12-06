@@ -35,17 +35,17 @@ const ViewNewLogin = ({ navigation }) => {
         setLoading(true);
 
         async function testLogin() {
-            const response = await fetch('http://177.44.248.30:3333/auth', {
-                method: 'POST',
+            const response = await fetch('http://177.44.248.47:3000/auth', {
+                method: 'GET',
                 headers: {
                     'Authorization': 'Basic ' +
                         base64.encode(user + ":" + pass)
                 }
             });
             const json = await response.json();
-
+            console.log(json);
             setLoading(false);
-            if (json.id) {
+            if (json =! null) {
 
                 //DADOS OK => navegar adiante
                 saveUser(user, pass);
@@ -53,7 +53,7 @@ const ViewNewLogin = ({ navigation }) => {
                 
                 navigation.reset({
                     index: 0,
-                    routes: [{ name: "ViewUsers" }]
+                    routes: [{ name: "Menu" }]
                 })
 
             } else {
@@ -71,14 +71,15 @@ const ViewNewLogin = ({ navigation }) => {
             style={[theme.login, styles.container]}>
             {loading == true ? <ActivityIndicator size='large' color='#fff' />
                 :
-                <ScrollView showsVerticalScrollIndicator={false}>
+                <ScrollView showsVerticalScrollIndicator={false} style={{backgroundColor: "#0e0e0c"}}>
                     <LoginScreen
                         style={[theme.login, { marginTop: 8 }]}
-                        logoImageSource={require("../assets/logo.png")}
+                        logoImageSource={require("../assets/logo-crie-ti.png")}
                         onLoginPress={() => login(usuario.username, usuario.password)}
                         onSignupPress={() => { }}
                         onEmailChange={(user) => { usuario.username = user }}
-                        textInputProps={{ keyboardType: "email-address" }} //vai definir para o input da senha também
+                        textInputProps={{ keyboardType: "email-address" }} 
+                        disableSocialButtons={true}
                         onPasswordChange={(password) => { usuario.password = password }}>
                     </LoginScreen>
                 </ScrollView>

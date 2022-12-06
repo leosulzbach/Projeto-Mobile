@@ -91,7 +91,7 @@ class UsersController {
   }
 
   _validateData = async (data:any, id?:number) => {
-    const attributes = ['name', 'age', 'sex', 'email'];
+    const attributes = ['name', 'age', 'sex', 'email', 'password'];
     const user:any = {};
     for (const attribute of attributes) {
       if (! data[attribute]){

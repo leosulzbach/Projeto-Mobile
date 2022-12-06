@@ -7,7 +7,7 @@ export const theme = StyleSheet.create({
     },
     login: {
         flex: 1,
-        backgroundColor: '#555'
+        backgroundColor: '#0e0e0c'
     },
     input: {
         borderWidth: 1,

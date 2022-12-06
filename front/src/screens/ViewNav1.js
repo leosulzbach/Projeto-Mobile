@@ -10,24 +10,9 @@ const ViewNav1 = (props) => {
       style={styles.container}>
 
       <CustomButton
-        onPress={() => props.navigation.navigate("ViewTasks")}
-        label="Navegar para ViewTasks" />
-
-      <CustomButton
-        onPress={() => props.navigation.navigate("ViewPicker")}
-        label="Navegar para ViewPicker" />
-
-      <CustomButton
-        onPress={() => props.navigation.navigate("ViewState")}
-        label="Navegar para ViewState" />
-
-      <CustomButton
-        onPress={() => props.navigation.navigate("ViewEffect")}
-        label="Navegar para ViewEffect" />
-
-      <CustomButton
-        onPress={() => props.navigation.navigate("ViewImages")}
-        label="Navegar para ViewImages" />
+        onPress={() => props.navigation.navigate("Usuários")}
+        label="Navegar para Usuários"
+        style={styles.button} />
 
     </Animatable.View>
   );
@@ -41,5 +26,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  button: {
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 10,
+    backgroundColor: "#262624",
+    maxHeight: 55,
+    maxWidth: 350,
+    minHeight: 55,
+    minWidth: 350
   }
 });
