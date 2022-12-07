@@ -180,6 +180,7 @@ export default ViewUsers = ({ navigation }) => {
                             onPress={(saveUser)}
                             textColor="#fff"
                             width="100%"
+                            style={styles.button}
                             backgroundColor="#9400d3" />
                     </View>
                 </KeyboardAvoidingView>
@@ -205,4 +206,11 @@ const styles = StyleSheet.create({
         paddingLeft: 8,
         fontFamily: "RobotoSlab_400Regular"
     },
+    button: {
+        marginTop: 20,
+        borderWidth: 2,
+        padding: 7,
+        backgroundColor: 'gray',
+        borderRadius: 20
+    }
 });
