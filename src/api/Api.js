@@ -1,5 +1,5 @@
 async function getUsers() {
-    const response = await fetch('http://177.44.248.47:3000/users', {
+    const response = await fetch('http://177.44.248.30:3333/users', {
         method: 'GET',
         headers: getHeaders()
     });
@@ -11,5 +11,3 @@ async function getUsers() {
         return json.message;
     }
 }
-
-getUsers();
